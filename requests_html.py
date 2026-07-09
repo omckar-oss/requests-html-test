@@ -843,3 +843,7 @@ class AsyncHTMLSession(BaseSession):
         ]
         done, _ = self.loop.run_until_complete(asyncio.wait(tasks))
         return [t.result() for t in done]
+
+def hello_util(name):
+    ''' Return a friendly greeting. '''
+    return f'Hello, {name}!'
